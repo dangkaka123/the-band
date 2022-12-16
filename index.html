@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hải Đăng</title>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./font/themify-icons/themify-icons.css">
 </head>
 
@@ -36,6 +37,10 @@
             <div class="search-btn">
                 <i class="search-icon ti-search"></i>
             </div>
+
+            <div id="mobile-menu" class="mobile-menu-btn">
+                <i class="menu-icon ti-menu"></i>
+            </div>
             <!-- End: Search button -->
 
         </div>
@@ -58,15 +63,15 @@
                     <div class="row members-list">
                         <div class="member-item col col-third text-center ">
                             <p class="member-name">Name</p>
-                            <img src="/img/slider/bandmember.jpg" alt="Name" class="member-img">
+                            <img src="./img/slider/bandmember.jpg" alt="Name" class="member-img">
                         </div>
                         <div class="member-item col col-third text-center ">
                             <p class="member-name">Name</p>
-                            <img src="/img/slider/bandmember.jpg" alt="Name" class="member-img">
+                            <img src="./img/slider/bandmember.jpg" alt="Name" class="member-img">
                         </div>
                         <div class="member-item col col-third text-center ">
                             <p class="member-name">Name</p>
-                            <img src="/img/slider/bandmember.jpg" alt="Name" class="member-img">
+                            <img src="./img/slider/bandmember.jpg" alt="Name" class="member-img">
                         </div>
                         <div class="clear"></div>
                     </div>
@@ -84,31 +89,31 @@
                         </ul>
                         <!-- Places -->
                         <div class="places-list row">
-                            <div class="place-item col col-third">
-                                <img src="/img/slider/place1.jpg" alt="New York" class="place-img">
+                            <div class="place-item s-col-full mt-16 col col-third">
+                                <img src="./img/slider/place1.jpg" alt="New York" class="place-img">
                                 <div class="place-body">
                                     <h3 class="place-heading">New York</h3>
                                     <p class="place-time">Fri 27 Nov 2016</p>
                                     <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                    <button class="place-buy-btn js-buy-btn">Buy Tickets</button>
+                                    <button class="place-buy-btn s-full-width js-buy-btn">Buy Tickets</button>
                                 </div>
                             </div>
-                            <div class="place-item col col-third">
-                                <img src="/img/slider/place2.jpg" alt="Paris" class="place-img">
+                            <div class="place-item s-col-full mt-16 col col-third">
+                                <img src="./img/slider/place2.jpg" alt="Paris" class="place-img">
                                 <div class="place-body">
                                     <h3 class="place-heading">Paris</h3>
                                     <p class="place-time">Sat 28 Nov 2016</p>
                                     <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                    <button class="place-buy-btn js-buy-btn">Buy Tickets</button>
+                                    <button class="place-buy-btn s-full-width js-buy-btn">Buy Tickets</button>
                                 </div>
                             </div>
-                            <div class="place-item col col-third">
-                                <img src="/img/slider/place3.jpg" alt="San Francisco" class="place-img">
+                            <div class="place-item s-col-full mt-16 col col-third">
+                                <img src="./img/slider/place3.jpg" alt="San Francisco" class="place-img">
                                 <div class="place-body">
                                     <h3 class="place-heading">San Francisco</h3>
                                     <p class="place-time">Sun 29 Nov 2016</p>
                                     <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                    <button class="place-buy-btn js-buy-btn">Buy Tickets</button>
+                                    <button class="place-buy-btn s-full-width js-buy-btn">Buy Tickets</button>
                                 </div>
                             </div>
                             <div class="clear"></div>
@@ -121,18 +126,18 @@
                     <h2 class="section-heading">CONTACT</h2>
                     <p class="section-sub-heading">Fan? Drop a note!</p>
                     <div class="row contact-content">
-                        <div class="col col-half contact-info">
+                        <div class="col col-half contact-info s-col-full">
                             <p><i class="ti-location-pin"></i>Chicago, US</p>
                             <p><i class="ti-mobile"></i>Phone: +00 151515</p>
                             <p><i class="ti-email"></i>Email: mail@mail.com</p>
                         </div>
-                        <div class="col col-half contact-form">
+                        <div class="col col-half contact-form s-col-full">
                             <form action="">
                                 <div class="row">
-                                    <div class="col col-half">
+                                    <div class="col col-half s-col-full">
                                         <input type="text" name="" placeholder="Name" required id="" class="form-control">
                                     </div>
-                                    <div class="col col-half">
+                                    <div class="col col-half s-col-full s-mt-8">
                                         <input type="email" name="" placeholder="Email" required id="" class="form-control">
                                     </div>
                                 </div>
@@ -141,13 +146,13 @@
                                         <input type="text" name="" placeholder="Massage" required id="" class="form-control">
                                     </div>
                                 </div>
-                                <input class="form-submit-btn mt-16" type="submit" value="SEND">
+                                <input class="form-submit-btn mt-16 s-full-width" type="submit" value="SEND">
                             </form>
                         </div>
                     </div>
                 </div>
                 <div class="map-section">
-                    <img src="/img/slider/map.jpg" alt="Map">
+                    <img src="./img/slider/map.jpg" alt="Map">
                 </div>
         </div>
 
@@ -193,6 +198,37 @@
             </footer>
         </div>
     </div>
+
+    <script>
+        var header = document.getElementById ('header');
+        var mobileMenu = document.getElementById('mobile-menu');
+        var headerHeight = header.clientHeight;
+
+
+        mobileMenu.onclick = function (){
+            var isClosed = header.clientHeight === headerHeight;
+            if (isClosed){
+                header.style.height = 'auto';
+            } else {
+                header.style.height = null;
+            }
+        }
+
+        var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
+        for(var i = 0; i < menuItems.length; i++){
+            var menuItem = menuItems[i];
+
+            menuItem.onclick = function(event) {
+                var isParentMenu = this.nextElementSibling && menuItem.nextElementSibling.classList.contains('subnav');
+                if(isParentMenu){
+                    event.preventDefault();
+                } else{
+                    header.style.height = null;
+                }
+            }
+        }
+    </script>
+
     <script>
         const buyBtns = document.querySelectorAll('.js-buy-btn')
         const modal = document.querySelector('.js-modal')
